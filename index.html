@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Методы GREEN-API</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main>
+    <div class="controls">
+        <div class="group">
+            <input id="apiUrl" placeholder="apiUrl" autocomplete="off" spellcheck="false">
+            <input id="idInstance" placeholder="idInstance" autocomplete="off" spellcheck="false">
+            <input id="apiTokenInstance" placeholder="ApiTokenInstance" autocomplete="off" spellcheck="false">
+        </div>
+
+        <div class="group">
+            <button id="getSettings">getSettings</button>
+        </div>
+
+        <div class="group">
+            <button id="getStateInstance">getStateInstance</button>
+        </div>
+
+        <div class="group">
+            <input id="messagePhone" placeholder="77771234567" aria-label="Номер получателя" autocomplete="off">
+            <textarea id="messageText" rows="3" placeholder="Hello World!"></textarea>
+            <button id="sendMessage">sendMessage</button>
+        </div>
+
+        <div class="group">
+            <input id="filePhone" placeholder="77771234567" aria-label="Номер получателя" autocomplete="off">
+            <input id="fileUrl" placeholder="https://my.site.com/img/horse.png" aria-label="Ссылка на файл" autocomplete="off" spellcheck="false">
+            <button id="sendFileByUrl">sendFileByUrl</button>
+        </div>
+    </div>
+
+    <div class="output">
+        <label for="response">Ответ:</label>
+        <textarea id="response" readonly></textarea>
+    </div>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

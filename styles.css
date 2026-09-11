@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 32px 24px;
+    font: 14px/1.45 -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    color: #1c1c1c;
+    background: #fff;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 340px minmax(0, 1fr);
+    gap: 40px;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+input,
+textarea,
+button {
+    width: 100%;
+    padding: 9px 12px;
+    font: inherit;
+    color: inherit;
+    background: #fff;
+    border: 1px solid #c9c9c9;
+    border-radius: 4px;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #3a7afe;
+    outline: 1px solid #3a7afe;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    text-align: center;
+    cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+    background: #f2f2f2;
+}
+
+button:active:not(:disabled) {
+    background: #e8e8e8;
+}
+
+button:disabled {
+    color: #9a9a9a;
+    cursor: default;
+}
+
+.output {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.output label {
+    color: #555;
+}
+
+#response {
+    flex: 1;
+    min-height: 560px;
+    font-family: ui-monospace, Consolas, "Courier New", monospace;
+}
+
+@media (max-width: 860px) {
+    main {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    #response {
+        min-height: 300px;
+    }
+}
